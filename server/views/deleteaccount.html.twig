@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+{% block title %}
+	DeleteAccount
+{% endblock %}
+{% block contenu %}
+	<p class="text-warning mt-2">
+		{{message}}
+	</p>
+	<form class="mt-3" method="POST" action="/deleteaccount">
+		<fieldset>
+			<legend>
+				Do you want to delete yout account ?
+			</legend>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="option" value="yes">
+					Yes
+				</label>
+			</div>
+			<div class="form-check disabled">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="option" value="no" checked="">
+					No
+				</label>
+			</div>
+			<button type="submit" class="btn btn-danger mt-2">Delete</button>
+		</fieldset>
+	</form>
+{% endblock %}

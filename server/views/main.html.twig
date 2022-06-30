@@ -1,0 +1,17 @@
+{% extends "baseloged.html.twig" %}
+{% block title %}
+	Main page
+{% endblock %}
+{% block contenu %}
+	<h5 class="m-4 d-flex justify-content-center ">
+		Logged as
+		{{user.username}}</h5>
+	{% for user in users %}
+		<div class="card text-white bg-primary mt-3">
+			<div class="card-header">{{ user.username}}</div>
+			<div class="card-body">
+				<p class="card-text">{{user.info}}</p>
+			</div>
+		</div>
+	{% endfor %}
+{% endblock %}
